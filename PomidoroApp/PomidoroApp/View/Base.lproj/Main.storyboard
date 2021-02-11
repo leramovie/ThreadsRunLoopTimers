@@ -1,24 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PomidoroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Every 45 sec. The tomato will tell you to get distracted." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nED-bf-0Kc">
+                                <rect key="frame" x="20" y="64" width="374" height="61"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="9qt-LP-2Ah"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tomato" translatesAutoresizingMaskIntoConstraints="NO" id="Gar-U3-w97">
+                                <rect key="frame" x="-37.5" y="133" width="489" height="187"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Pbn-aQ-w8B">
+                                <rect key="frame" x="167" y="334" width="80" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWl-6v-IDd">
+                                        <rect key="frame" x="7.5" y="0.0" width="65" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="45 sec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otm-ME-xsM">
+                                        <rect key="frame" x="0.0" y="28.5" width="80" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCG-3B-CBU">
+                                <rect key="frame" x="10" y="425" width="394" height="47"/>
+                                <color key="backgroundColor" red="0.09131683743393848" green="0.3737754436454388" blue="0.13934053488731921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <size key="titleShadowOffset" width="5" height="0.0"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="0.97588709829999998" blue="0.93415560070000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ytE-pv-BRB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pbn-aQ-w8B" firstAttribute="centerX" secondItem="nED-bf-0Kc" secondAttribute="centerX" id="1uT-nE-gEm"/>
+                            <constraint firstItem="Pbn-aQ-w8B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="334" id="4vz-gi-rjB"/>
+                            <constraint firstAttribute="trailing" secondItem="vCG-3B-CBU" secondAttribute="trailing" constant="10" id="WAr-a0-sVy"/>
+                            <constraint firstItem="nED-bf-0Kc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="b7Z-Uy-C7q"/>
+                            <constraint firstItem="Gar-U3-w97" firstAttribute="top" secondItem="nED-bf-0Kc" secondAttribute="bottom" constant="8" symbolic="YES" id="d8l-w7-rkE"/>
+                            <constraint firstItem="vCG-3B-CBU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="k5Y-6I-eWy"/>
+                            <constraint firstItem="nED-bf-0Kc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="mBS-kP-AZZ"/>
+                            <constraint firstItem="Pbn-aQ-w8B" firstAttribute="top" secondItem="Gar-U3-w97" secondAttribute="bottom" constant="14" id="ori-T4-6Pa"/>
+                            <constraint firstItem="Pbn-aQ-w8B" firstAttribute="centerX" secondItem="vCG-3B-CBU" secondAttribute="centerX" id="ssd-72-kPe"/>
+                            <constraint firstItem="vCG-3B-CBU" firstAttribute="top" secondItem="Pbn-aQ-w8B" secondAttribute="bottom" constant="30" id="tYC-X5-T83"/>
+                            <constraint firstItem="Pbn-aQ-w8B" firstAttribute="centerX" secondItem="Gar-U3-w97" secondAttribute="centerX" id="xAL-ee-VLO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="8bC-Xf-vdC" id="Cfc-9X-90t"/>
+                        <outlet property="startButton" destination="vCG-3B-CBU" id="nc0-vq-tl6"/>
+                        <outlet property="timerLabel" destination="Otm-ME-xsM" id="5fU-oa-sTz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.623188405797109" y="62.946428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tomato" width="488.5" height="353"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

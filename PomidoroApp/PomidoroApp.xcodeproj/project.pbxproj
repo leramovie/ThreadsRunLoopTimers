@@ -56,15 +56,31 @@
 		F9EEBF6725D3E16000A2074C /* PomidoroApp */ = {
 			isa = PBXGroup;
 			children = (
+				F9EEBF8125D3F3CF00A2074C /* Controller */,
+				F9EEBF7D25D3E17800A2074C /* View */,
 				F9EEBF6825D3E16000A2074C /* AppDelegate.swift */,
 				F9EEBF6A25D3E16000A2074C /* SceneDelegate.swift */,
-				F9EEBF6C25D3E16000A2074C /* ViewController.swift */,
-				F9EEBF6E25D3E16000A2074C /* Main.storyboard */,
 				F9EEBF7125D3E16800A2074C /* Assets.xcassets */,
-				F9EEBF7325D3E16800A2074C /* LaunchScreen.storyboard */,
 				F9EEBF7625D3E16800A2074C /* Info.plist */,
 			);
 			path = PomidoroApp;
+			sourceTree = "<group>";
+		};
+		F9EEBF7D25D3E17800A2074C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9EEBF7325D3E16800A2074C /* LaunchScreen.storyboard */,
+				F9EEBF6E25D3E16000A2074C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F9EEBF8125D3F3CF00A2074C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F9EEBF6C25D3E16000A2074C /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
